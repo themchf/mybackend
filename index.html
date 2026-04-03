@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKF Pharma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>MKF Pharma</h1>
+      <p class="muted">Clinical Drug Intelligence System</p>
+    </header>
+
+    <!-- AUTH -->
+    <div class="card">
+      <h3>Account</h3>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+
+      <div class="inline-fields">
+        <button id="login-btn">Login</button>
+        <button id="signup-btn">Sign Up</button>
+        <button id="logout-btn" style="display:none;">Logout</button>
+      </div>
+
+      <p id="auth-status" class="muted"></p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="card">
+      <div class="field">
+        <label class="muted">Drug name</label>
+        <input id="drug-input" type="text" placeholder="e.g. aspirin" />
+      </div>
+
+      <div class="inline-fields">
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div id="results" class="hidden"></div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card">
+      <div class="muted">Search history</div>
+      <div id="history-list"></div>
+    </div>
+
+    <div class="disclaimer">Property of MKF Innovations®</div>
+
+  </div>
+
+  <!-- SUPABASE -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
